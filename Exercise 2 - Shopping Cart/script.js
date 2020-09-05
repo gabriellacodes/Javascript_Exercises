@@ -46,9 +46,34 @@ function show(shown, hidden) {
 // }
   
 var items = [];
+var total = 0;
 
 $(".addButton").on("click", function() {
     var newTr = $(this).closest("tr").clone();
     items.push(newTr);
     newTr.appendTo( $("#tablecart") );
 });
+
+// //trigger an event when the input receives a change
+// $("#tablecart").off("change").on("change", function(ele) {
+//   //clear the out put box
+//   $("#totalOut").val("0");
+//   //for the table container, select all tr's within the table's tbody. 
+//   //Excluding tbody will also select the thead.
+//   $("#exampleTableContainer table tbody tr").each(function(index, rowElement) {
+//     //tablulate the cost of the current row
+//     var rowCost = parseInt($(rowElement).find(".cost").text()) * parseInt($(rowElement).find(".amount input").val());
+//     //if the rowCost is a valid number, add it to whatever is in the output box
+//     if (rowCost) $("#totalOut").val(parseInt($("#totalOut").val()) + rowCost)
+//   });
+// });
+
+// var table = document.getElementById("Cart"), sumVal = 0;
+            
+//             for(var i = 0; i < table.rows.length; i++)
+//             {
+//                 sumVal = sumVal + parseInt(table.rows[i].cells[2].innerHTML);
+//             }
+            
+//             document.getElementById("val").innerHTML = "Sum Value = " + sumVal;
+//             console.log(sumVal);

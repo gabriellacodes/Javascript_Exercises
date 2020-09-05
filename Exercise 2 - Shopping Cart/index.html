@@ -13,7 +13,6 @@
             <h1>Let's go shopping</h1>
         </header>
             <div id="button_add" class="component">
-                <p align="center"> View Cart    <a href="#" onclick="return show('Cart','Main');"> cart<img src="cart.png" height=100px width=100px> </img> </a> </p>
                 <h2>Items available</h2>
 
                 <table id="Items" align="center" border="1" bgcolor="white">
@@ -34,19 +33,19 @@
                     <td>Aldi</td>
                     <td>Banana</td>
                     <td>1.45</td>
-                    <td> <input class = "addButton" type="image" src="cart_yes.fw.png" name="Cart" height="50px" width="45px" onclick="AddtoCart()"> </td>
+                    <td> <input class = "addButton" type="image" src="cart_yes.fw.png" name="Cart" height="50px" width="45px"> </td>
                   </tr>
                   <tr>
                     <td>Coles</td>
                     <td>Apple</td>
                     <td>1.00</td>
-                    <td> <input class = "addButton" type="image" src="cart_yes.fw.png" name="Cart" height="50px" width="45px" onclick="AddtoCart()"> </td>
+                    <td> <input class = "addButton" type="image" src="cart_yes.fw.png" name="Cart" height="50px" width="45px"> </td>
                   </tr>
                   <tr>
                       <td>Aldi</td>
                     <td>Apple</td>
                     <td>0.75</td>
-                    <td> <input class = "addButton" type="image" src="cart_yes.fw.png" name="Cart" height="50px" width="45px" onclick="AddtoCart()"> </td>
+                    <td> <input class = "addButton" type="image" src="cart_yes.fw.png" name="Cart" height="50px" width="45px"> </td>
                   </tr>
                 </table>
                   <div class ="Cart" id="Cart" style="display:none">
@@ -55,8 +54,14 @@
                      
                     <table id="tablecart" align="center" border="1" bgcolor="white">
                     </table>
-                    
                      <!-- <p align="center"> <a href="#" onclick="return show('Main','Cart');">Return</a> </p> -->
+                    </div>
+                    <div>
+                      <p align="center"> View Cart    <a href="#" onclick="return show('Cart','Main');"> cart<img src="cart.png" height=100px width=100px> </img> </a> </p>
+                    </div>
+                    <div class="Total" id="Total">
+                      Total:
+                      <input id="totalOut" readonly value="0">
                     </div>
             </div>
         </div>
