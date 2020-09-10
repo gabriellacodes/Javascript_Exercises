@@ -1,0 +1,28 @@
+:root {
+    font-family: "Comic Sans MS";
+    font-size: 14px;
+    background-color: whitesmoke;
+}
+
+* {
+    font: inherit;
+}
+
+h1 {
+    font-family: "Comic Sans MS";
+    text-align: center;
+    font-size: 3em;
+}
+
+.text-input {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons {
+    padding-top: 25px;;
+}
+
+#meme-canvas {
+    width: 300px;
+}

@@ -46,12 +46,14 @@ function show(shown, hidden) {
 // }
   
 var items = [];
-var total = 0;
+var sumVal = 0;
 
 $(".addButton").on("click", function() {
     var newTr = $(this).closest("tr").clone();
-    items.push(newTr);
-    newTr.appendTo( $("#tablecart") );
+	items.push(newTr);
+	item_price = parseInt(newTr.rows[0].cells[2].innerHTML)
+	sumVal = sumVal + item_price;
+	newTr.appendTo( $("#tablecart") );
 });
 
 // //trigger an event when the input receives a change
@@ -74,6 +76,15 @@ $(".addButton").on("click", function() {
 //             {
 //                 sumVal = sumVal + parseInt(table.rows[i].cells[2].innerHTML);
 //             }
-            
 //             document.getElementById("val").innerHTML = "Sum Value = " + sumVal;
 //             console.log(sumVal);
+
+// var table = document.getElementById("tablecart"), sumVal = 0;
+            
+// 	for(var i = 1; i < table.rows.length; i++)
+// 	{
+// 		sumVal = sumVal + parseInt(table.rows[i].cells[2].innerHTML);
+// 	}
+	
+// 	document.getElementById("val").innerHTML = "Cart total = $" + sumVal;
+// 	console.log(sumVal);
